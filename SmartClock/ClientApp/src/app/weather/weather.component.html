@@ -1,0 +1,4 @@
+<div class="temperature">
+    {{ forecast.temperature }}&#176;F
+    <i [ngClass]="{'wi-day-cloudy': forecast.condition == 'PartlyCloudy', 'wi-cloud': forecast.condition == 'Cloudy', 'wi-day-sunny': forecast.condition == 'Sunny', 'wi-day-rain': forecast.condition == 'Rainy'}" class="wi"></i>
+</div>

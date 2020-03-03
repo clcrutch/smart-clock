@@ -1,0 +1,18 @@
+@import "~@angular/material/theming";
+
+$primaryPalette: mat-palette($mat-indigo);
+
+.date {
+    color: $dark-primary-text;
+    font-size: 65px;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+}
+
+.time {
+    background-color: mat-color($primaryPalette);
+    color: $light-primary-text;
+    font-size: 100px;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+}
