@@ -14,14 +14,14 @@ namespace SmartClock.Controllers
     [Route("api/[controller]")]
     public class WeatherController : ControllerBase
     {
-        private IWeatherService weatherService;
+        private readonly IWeatherService _weatherService;
 
         public WeatherController()
         {
-            weatherService = new HomeAssistantWeatherService();
+            _weatherService = new HomeAssistantWeatherService();
         }
 
         [HttpGet]
-        public Task<IEnumerable<WeatherForecast>> Get() => weatherService.GetForecastsAsync();
+        public Task<IEnumerable<WeatherForecast>> Get() => _weatherService.GetForecastsAsync();
     }
 }

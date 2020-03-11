@@ -1,0 +1,7 @@
+{
+  "$schema": "NerdBank.GitVersioning/version.schema.json",
+  "version": "0.1",
+  "publicReleaseRefSpec": [
+    "^refs/heads/master$"
+  ]
+}
