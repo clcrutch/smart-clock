@@ -5,6 +5,8 @@ WORKDIR /app
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+RUN apt-get update
+RUN apt-get install nodejs npm -y
 WORKDIR /src
 COPY ["SmartClock/SmartClock.csproj", "SmartClock/"]
 COPY ["SmartClock.Core/SmartClock.Core.csproj", "SmartClock.Core/"]
