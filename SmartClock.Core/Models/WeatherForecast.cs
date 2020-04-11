@@ -8,6 +8,6 @@ namespace SmartClock.Core.Models
     {
         public WeatherCondition Condition { get; set; }
         public DateTime Date { get; set; }
-        public float Temperature { get; set; }
+        public double Temperature { get; set; }
     }
 }

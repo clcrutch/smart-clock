@@ -12,6 +12,64 @@
           <e p="README.md" t="Include" />
           <e p="angular.json" t="Include" />
           <e p="browserslist" t="Include" />
+          <e p="dist" t="Include">
+            <e p="out-tsc" t="Include">
+              <e p="e2e" t="Include">
+                <e p="src" t="Include">
+                  <e p="app.e2e-spec.js" t="Include" />
+                  <e p="app.e2e-spec.js.map" t="Include" />
+                  <e p="app.po.js" t="Include" />
+                  <e p="app.po.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="src" t="Include">
+                <e p="app" t="Include">
+                  <e p="app.component.js" t="Include" />
+                  <e p="app.component.js.map" t="Include" />
+                  <e p="app.component.spec.js" t="Include" />
+                  <e p="app.component.spec.js.map" t="Include" />
+                  <e p="app.module.js" t="Include" />
+                  <e p="app.module.js.map" t="Include" />
+                  <e p="clock" t="Include">
+                    <e p="clock.component.js" t="Include" />
+                    <e p="clock.component.js.map" t="Include" />
+                    <e p="clock.component.spec.js" t="Include" />
+                    <e p="clock.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="clock.service.js" t="Include" />
+                  <e p="clock.service.js.map" t="Include" />
+                  <e p="clock.service.spec.js" t="Include" />
+                  <e p="clock.service.spec.js.map" t="Include" />
+                  <e p="info.service.js" t="Include" />
+                  <e p="info.service.js.map" t="Include" />
+                  <e p="info.service.spec.js" t="Include" />
+                  <e p="info.service.spec.js.map" t="Include" />
+                  <e p="weather" t="Include">
+                    <e p="weather.component.js" t="Include" />
+                    <e p="weather.component.js.map" t="Include" />
+                    <e p="weather.component.spec.js" t="Include" />
+                    <e p="weather.component.spec.js.map" t="Include" />
+                  </e>
+                  <e p="weather.service.js" t="Include" />
+                  <e p="weather.service.js.map" t="Include" />
+                  <e p="weather.service.spec.js" t="Include" />
+                  <e p="weather.service.spec.js.map" t="Include" />
+                </e>
+                <e p="environments" t="Include">
+                  <e p="environment.js" t="Include" />
+                  <e p="environment.js.map" t="Include" />
+                  <e p="environment.prod.js" t="Include" />
+                  <e p="environment.prod.js.map" t="Include" />
+                </e>
+                <e p="main.js" t="Include" />
+                <e p="main.js.map" t="Include" />
+                <e p="polyfills.js" t="Include" />
+                <e p="polyfills.js.map" t="Include" />
+                <e p="test.js" t="Include" />
+                <e p="test.js.map" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="e2e" t="Include">
             <e p="protractor.conf.js" t="Include" />
             <e p="src" t="Include">
@@ -108,6 +166,8 @@
               </e>
               <e p="clock.service.spec.ts" t="Include" />
               <e p="clock.service.ts" t="Include" />
+              <e p="info.service.spec.ts" t="Include" />
+              <e p="info.service.ts" t="Include" />
               <e p="weather" t="Include">
                 <e p="weather.component.html" t="Include" />
                 <e p="weather.component.scss" t="Include" />
@@ -157,7 +217,10 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="mono_crash.mem.17488.1.blob" t="Include" />
+        <e p="mono_crash.mem.17928.1.blob" t="Include" />
         <e p="mono_crash.mem.18345.1.blob" t="Include" />
+        <e p="mono_crash.mem.18705.1.blob" t="Include" />
         <e p="mono_crash.mem.18878.1.blob" t="Include" />
         <e p="mono_crash.mem.19350.1.blob" t="Include" />
         <e p="mono_crash.mem.20116.1.blob" t="Include" />
@@ -196,7 +259,6 @@
       </e>
       <e p="SmartClock.Services.HomeAssistant" t="IncludeRecursive">
         <e p="HomeAssistantServiceBase.cs" t="Include" />
-        <e p="HomeAssistantState.cs" t="Include" />
         <e p="HomeAssistantWeatherService.cs" t="Include" />
         <e p="SmartClock.Services.HomeAssistant.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />

@@ -1,37 +1,31 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using HADotNet.Core;
+using HADotNet.Core.Clients;
 
 namespace SmartClock.Services.HomeAssistant
 {
     public abstract class HomeAssistantServiceBase
     {
-        protected string HomeAssistantApiKey =>
+        protected static string HomeAssistantApiKey =>
             Environment.GetEnvironmentVariable("HOMEASSISTANT_APIKEY");
 
-        protected string HomeAssistantUri =>
-            Environment.GetEnvironmentVariable("HOMEASSISTANT_URL");
+        protected static Uri HomeAssistantUri =>
+            new Uri(Environment.GetEnvironmentVariable("HOMEASSISTANT_URL"));
 
-        protected HttpClient GetHttpClient()
+        static HomeAssistantServiceBase()
         {
-            var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HomeAssistantApiKey);
+            ClientFactory.Initialize(HomeAssistantUri, HomeAssistantApiKey);
 
-            return httpClient;
-        }
-
-        protected async Task<HomeAssistantState<TState, TAttribute>> GetStateAsync<TState, TAttribute>(string entityId)
-        {
-            using (var httpClient = GetHttpClient())
-            {
-                var response = await httpClient.GetAsync($"{HomeAssistantUri}/api/states/{entityId}");
-                var content = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<HomeAssistantState<TState, TAttribute>>(content);
-            }
+            var stateEvent = (from e in ClientFactory.GetClient<EventClient>().GetEvents().Result
+                where e.Event == "state_changed"
+                select e).FirstOrDefault();
         }
     }
 }
